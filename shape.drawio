@@ -1,0 +1,128 @@
+<mxfile host="65bd71144e">
+    <diagram id="c2G91pv0JLgsLTdkSE3m" name="Page-1">
+        <mxGraphModel dx="1303" dy="664" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="150" pageHeight="150" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="10" value="Shape::Trimesh" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#fff2cc;strokeColor=#d6b656;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Comic Sans MS;" parent="1" vertex="1">
+                    <mxGeometry x="10" y="200" width="160" height="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value=" - vertices: VecXT&lt;Vec3d&gt;&#10; - facets: VecXT&lt;Vec3i&gt;&#10; - vertices_neighs:&#10;VecXT&lt;VecXT&lt;int&gt;&gt;&#10; - VecXT&lt;VecXT&lt;int&gt;&gt;&#10;linked_vertices;&#10;……" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Comic Sans MS;" parent="10" vertex="1">
+                    <mxGeometry y="26" width="160" height="104" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Comic Sans MS;" parent="10" vertex="1">
+                    <mxGeometry y="130" width="160" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value=" + UpdateLinked&#10;VerticesSub(vid:int):void&#10; + SupportPoint_&#10;LinkedVertices(dir:Vec3d)&#10;:Vec3d&#10;……&#10;&#10;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Comic Sans MS;" parent="10" vertex="1">
+                    <mxGeometry y="140" width="160" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="Shape:: LevelSet" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#fff2cc;strokeColor=#d6b656;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Comic Sans MS;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="240" width="180" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value=" - spacing: double;&#10; - dim: Vec3i;&#10; - signed_distance_table:&#10;VecXT&lt;VecXT&lt;&#10;VecXT&lt;double&gt;&gt;&gt;;&#10;……&#10;&#10;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Comic Sans MS;" parent="19" vertex="1">
+                    <mxGeometry y="26" width="180" height="94" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Comic Sans MS;" parent="19" vertex="1">
+                    <mxGeometry y="120" width="180" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value=" + SetDimension(dim_x: double,&#10;dim_y: double, dim_z:double): &#10;void;&#10;……&#10;&#10;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Comic Sans MS;" parent="19" vertex="1">
+                    <mxGeometry y="130" width="180" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="Shape" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Comic Sans MS;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="170" width="170" height="270" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value=" - id: int&#10; # label: string&#10; # size: double&#10; # volume: double&#10; # surface_nodes:&#10;VecXT&lt;Vec3d&gt;&#10;……&#10;&#10;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Comic Sans MS;" parent="23" vertex="1">
+                    <mxGeometry y="26" width="170" height="104" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Comic Sans MS;" parent="23" vertex="1">
+                    <mxGeometry y="130" width="170" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value=" + GetSize(): double&#10; + GetVolume(): double&#10; + SetSize(d: double): void&#10; + SaveAsSTL(filename:&#10;     string):void&#10; + SetSurfaceNodes(surf_stl:&#10;     STLModel):void&#10;……" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Comic Sans MS;" parent="23" vertex="1">
+                    <mxGeometry y="140" width="170" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="Shape::Coded-NetSDF" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#fff2cc;strokeColor=#d6b656;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Comic Sans MS;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="10" width="190" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value=" - net_sdf_model: RegressionNet&#10; - latent_code: VecXT&lt;double&gt; &#10;&#10;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Comic Sans MS;" parent="27" vertex="1">
+                    <mxGeometry y="26" width="190" height="44" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Comic Sans MS;" parent="27" vertex="1">
+                    <mxGeometry y="70" width="190" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="- InitFromModelFiles&#10;(net_sdf_file: string, &#10;latent_code_file:string,&#10;id:int):void&#10;&#10;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Comic Sans MS;" parent="27" vertex="1">
+                    <mxGeometry y="80" width="190" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="Shape::Coded-NetSDF" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#fff2cc;strokeColor=#d6b656;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Comic Sans MS;" parent="1" vertex="1">
+                    <mxGeometry x="10" y="50" width="190" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value=" - net_sdf_model: RegressionNet&#10;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Comic Sans MS;" parent="31" vertex="1">
+                    <mxGeometry y="26" width="190" height="24" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Comic Sans MS;" parent="31" vertex="1">
+                    <mxGeometry y="50" width="190" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="- InitFromModelFiles&#10;(net_sdf_file: string):void&#10;&#10;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Comic Sans MS;" parent="31" vertex="1">
+                    <mxGeometry y="60" width="190" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;exitX=1.009;exitY=0.037;exitDx=0;exitDy=0;exitPerimeter=0;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Comic Sans MS;" parent="1" source="23" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="290" y="250" as="sourcePoint"/>
+                        <mxPoint x="440" y="250" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="38" value="parent" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Comic Sans MS;" parent="37" connectable="0" vertex="1">
+                    <mxGeometry x="-1" relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="child" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Comic Sans MS;" parent="37" connectable="0" vertex="1">
+                    <mxGeometry x="1" relative="1" as="geometry">
+                        <mxPoint x="-10" y="20" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="40" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Comic Sans MS;" parent="1" source="23" target="28" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="260" y="99.99000000000001" as="sourcePoint"/>
+                        <mxPoint x="308.47" y="170" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="41" value="parent" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Comic Sans MS;" parent="40" connectable="0" vertex="1">
+                    <mxGeometry x="-1" relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="child" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Comic Sans MS;" parent="40" connectable="0" vertex="1">
+                    <mxGeometry x="1" relative="1" as="geometry">
+                        <mxPoint x="-10" y="22" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="43" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1.003;entryY=0.14;entryDx=0;entryDy=0;entryPerimeter=0;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Comic Sans MS;" parent="1" source="23" target="31" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="315" y="180" as="sourcePoint"/>
+                        <mxPoint x="450" y="68" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="44" value="parent" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Comic Sans MS;" parent="43" connectable="0" vertex="1">
+                    <mxGeometry x="-1" relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="child" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Comic Sans MS;" parent="43" connectable="0" vertex="1">
+                    <mxGeometry x="1" relative="1" as="geometry">
+                        <mxPoint x="29" y="-4" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="55" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;exitX=-0.003;exitY=0.048;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Comic Sans MS;" parent="1" source="23" target="10" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="290" y="250" as="sourcePoint"/>
+                        <mxPoint x="450" y="250" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="56" value="parent" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Comic Sans MS;" parent="55" connectable="0" vertex="1">
+                    <mxGeometry x="-1" relative="1" as="geometry">
+                        <mxPoint x="-39" y="-3" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="57" value="child" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontFamily=Comic Sans MS;" parent="55" connectable="0" vertex="1">
+                    <mxGeometry x="1" relative="1" as="geometry">
+                        <mxPoint x="-3" y="-1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
